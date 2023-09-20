@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+interface SideNavToggle{
+  screenWidth: number;
+  collapsed: boolean;
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,35 +14,13 @@ export class AppComponent {
   fileToUpload: File | null = null;  // Store the file temporarily
   message: string | null = null;  // Optional: to display status messages to the user
   Success: boolean = false;  // The flag for successful upload
-
+isSideNavCollapsed = false;
+screenWidth = 0;
   constructor(private http: HttpClient) {}
 
-  onFileSelected(event: any): void {
-    console.log("File selection triggered.");
-    this.fileToUpload = event.target.files[0];
+  onToggleSideNav(data: SideNavToggle): void{
+this.screenWidth = data.screenWidth;
+this.isSideNavCollapsed = data.collapsed;
   }
 
-  onUploadClick(): void {
-    if (this.fileToUpload) {
-      this.uploadToServer(this.fileToUpload);
-    } else {
-      this.message = "Please select a file to upload first.";
-      this.Success = false;
-    }
-  }
-
-  private uploadToServer(file: File): void {
-    const formData = new FormData();
-    formData.append('file', file, file.name);
-
-    // Send the file to your backend, which will handle the upload to Google Drive.
-    this.http.post('http://localhost:3000/upload', formData).subscribe(
-      response => {
-        console.log('Upload to server successful', response);
-        this.message = "Upload to server successful.";
-        this.Success = true;
-      },
-     
-    );
-  }
 }

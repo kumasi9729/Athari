@@ -8,6 +8,7 @@ import { PdfUploadComponent } from './pdf-upload/pdf-upload.component';
 import { RacialInequityComponent } from './racial-inequity/racial-inequity.component';
 import { JobHuntingTipsComponent } from './job-hunting-tips/job-hunting-tips.component';
 import { HomeComponent } from './home/home.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     PdfUploadComponent,
     RacialInequityComponent,
     JobHuntingTipsComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

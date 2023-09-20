@@ -2,3 +2,10 @@
     <h2>Job Hunting Tips</h2>
     <p>Job hunting is essential to survive</p>
 </div>
+<section class="hello is-small is-primary">
+    <div class="hero-body has-text-centered">
+<input type="file" accept=".pdf" (change)="onFileSelected($event)">
+<button (click)="onUploadClick()">Upload</button>
+<div [class.success]="Success" [class.error]="!Success && message">{{ message }}</div>
+    </div>
+  </section>

@@ -7,3 +7,20 @@
 #about-me h2 {
     border-bottom: 2px solid black;
     padding-bottom: 10px;}
+
+    .hero{
+        background-image: url('/assets/img/home-img.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+.title{
+    color: #060505;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.125;
+    margin-bottom: 40rem;
+
+}
+.about-me{
+background-color: mintcream;
+}
