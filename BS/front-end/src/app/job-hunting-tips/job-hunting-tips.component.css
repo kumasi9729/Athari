@@ -1,0 +1,73 @@
+/* GENERAL STYLES */
+body {
+    background-color: #FAF0E6;
+}
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.lead {
+    color: #333;
+}
+
+/* CONTAINERS */
+.container {
+    max-width: 800px;
+}
+
+/* UPLOAD SECTION */
+.file {
+    margin-top: 20px;
+}
+
+.notification {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* ADDED BASED ON BOOTSTRAP CUSTOMIZATION */
+.custom-file-input:hover::before {
+    border-color: #007bff;
+}
+
+.custom-file-input:focus ~ .custom-file-label {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* BUTTON */
+button {
+    cursor: pointer;
+}
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* This ensures that it takes at least the full viewport height */
+    text-align: center; /* This centers the text inside each element */
+}
+
+
+
+
+
+
+/* HINT: If you need to add more styles, continue adding them below this line. */

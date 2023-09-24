@@ -1,11 +1,156 @@
-<div class="container mt-5">
-    <h2>Job Hunting Tips</h2>
-    <p>Job hunting is essential to survive</p>
-</div>
-<section class="hello is-small is-primary">
-    <div class="hero-body has-text-centered">
-<input type="file" accept=".pdf" (change)="onFileSelected($event)">
-<button (click)="onUploadClick()">Upload</button>
-<div [class.success]="Success" [class.error]="!Success && message">{{ message }}</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Hunting Tips</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="job-hunting-tips.component.css">
+</head>
+
+<body>
+    
+    <div class="container mt-5">
+        
+        <div class="text-center w-100"> 
+            <h1>Welcome to the Job Hunting Advice Page!</h1>
+        </div>        <section class="section mt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 class="text-center">Upload Your Resume</h2>
+                        
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" accept=".pdf" id="fileUpload" (change)="onFileSelected($event)">
+                            <label class="custom-file-label" for="fileUpload">Choose file</label>
+                        </div>
+                        
+                        <button class="btn btn-success btn-block mt-3" (click)="onUploadClick()">Upload</button>
+                        <div [class.success]="Success" [class.error]="!Success && message" class="alert mt-3" role="alert">{{ message }}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="centered-content">
+
+        <p class="lead">Here you will find advice on how to best prepare yourself to succeed in your Job Hunt:</p>
+
+        <div class="list-section">
+            <h5>1. Self-Assessment:</h5>
+            <ul>
+                <li>Know Yourself: Understand your strengths, weaknesses, values, and long-term goals.</li>
+                <li>Career Goals: Determine the type of job roles and companies that align with your aspirations and strengths.</li>
+                <li>Skills Gap Analysis: Identify areas you're lacking in and seek opportunities for growth.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>2. Resume Crafting:</h5>
+            <ul>
+                <li>Tailored Resumes: Customize your resume for each job application based on the job description.</li>
+                <li>Quantify Achievements: Use numbers to illustrate your accomplishments (e.g., "Increased sales by 20%").</li>
+                <li>Clean Layout: Use a clear and consistent format. There are many free resume templates online.</li>
+                <li>Keywords: Ensure your resume includes keywords from the job description to pass Applicant Tracking Systems (ATS).</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>3. Networking:</h5>
+            <ul>
+                <li>Leverage LinkedIn: Keep your profile updated, and actively network with industry professionals.</li>
+                <li>Informational Interviews: Set up informal chats with professionals in your desired field to gain insights.</li>
+                <li>Networking Events: Attend industry-specific conferences, seminars, and webinars.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>4. Continuous Learning:</h5>
+            <ul>
+                <li>Certifications: Acquire relevant certifications that are recognized in your industry.</li>
+                <li>Courses: Platforms like Coursera, Udemy, and edX offer courses on a multitude of subjects.</li>
+                <li>Workshops: Attend workshops and seminars to enhance practical knowledge.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>5. Personal Branding:</h5>
+            <ul>
+                <li>Professional Online Presence: Ensure that your online footprint (blogs, portfolios, social media) presents you in a professional light.</li>
+                <li>Blogging: Share your insights and knowledge in your field. This establishes thought leadership.</li>
+                <li>Portfolio: Especially for creative roles, having a portfolio showcases your work and skills.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>6. Interview Preparation:</h5>
+            <ul>
+                <li>Research: Understand the company's values, mission, recent news, and culture.</li>
+                <li>Mock Interviews: Practice with friends, mentors, or through platforms like Pramp.</li>
+                <li>Behavioral Questions: Prepare answers to common questions using the STAR method (Situation, Task, Action, Result).</li>
+                <li>Questions to Ask: Always have questions for the interviewer. It shows interest and initiative.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>7. Soft Skills:</h5>
+            <ul>
+                <li>Communication: Express your thoughts clearly, and practice active listening.</li>
+                <li>Teamwork: Showcase instances where you've collaborated effectively in teams.</li>
+                <li>Problem Solving: Highlight scenarios where you've tackled challenges creatively.</li>
+                <li>Adaptability: Demonstrate your ability to cope with changes and learn from new situations.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>8. Stay Updated:</h5>
+            <ul>
+                <li>Industry Trends: Be aware of the latest developments in your field.</li>
+                <li>Company News: Before an interview, be updated with the company's recent achievements or changes.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>9. Job Search Strategy:</h5>
+            <ul>
+                <li>Job Boards: Utilize websites like LinkedIn, Glassdoor, and Indeed.</li>
+                <li>Company Websites: Sometimes, companies post vacancies only on their official site.</li>
+                <li>Recruitment Agencies: They can assist in finding roles aligned with your skills and aspirations.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>10. Feedback and Reflection:</h5>
+            <ul>
+                <li>Ask for Feedback: If unsuccessful after an interview, seek feedback to understand areas of improvement.</li>
+                <li>Reflect: Regularly assess your job-hunting approach and tweak strategies as necessary.</li>
+            </ul>
+        </div>
+
+        <div class="list-section">
+            <h5>11. Diversify Skills:</h5>
+            <ul>
+                <li>Cross-training: Learn skills outside your primary domain. It makes you versatile.</li>
+                <li>Digital Literacy: In today's digital age, having basic tech skills, even for non-tech roles, is beneficial.</li>
+            </ul>
+        </div>
+
+        
+
+        <div class="list-section">
+            <h5>12. Internships and Freelancing:</h5>
+            <ul>
+                <li>Experience: Especially for fresh graduates, internships provide practical experience.</li>
+                <li>Freelancing: Platforms like Upwork or Freelancer can help you get projects relevant to your skills.</li>
+            </ul>
+        </div>
+
+        <p>Remember, job hunting is not just about finding any job, but the right job. It's a blend of perseverance, continuous learning, networking, and presenting yourself authentically. Good luck!</p>
+
     </div>
-  </section>
+</div>
+
+</body>
+</html>
